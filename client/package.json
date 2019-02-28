@@ -2,7 +2,7 @@
   "name": "google-books-search",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://yobany10.github.io/google-books-search",
+  "homepage": "https://yobany10.github.io/google-books-search",
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./components/Nav";
+import Jumbotron from "./components/Jumbotron"
+import { Input, FormBtn } from "./components/Form";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Nav />
+        <Jumbotron />
+
+          <form className="formSection">
+              <Input
+                // value={this.state.title}
+                // onChange={this.handleInputChange}
+                name="title"
+                placeholder="Title (required)"
+              />
+              <FormBtn
+                // disabled={!(this.state.title)}
+                // onClick={this.handleFormSubmit}
+              >
+                Search
+              </FormBtn>
+          </form>
+
       </div>
-    );
+      );
   }
 }
 
