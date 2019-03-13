@@ -1,37 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
+import NoMatch from "./pages/NoMatch";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import Jumbotron from "./components/Jumbotron"
-import { Input, FormBtn } from "./components/Form";
+import Jumbotron from "./components/Jumbotron";
 
-class App extends Component {
-  render() {
+function App() {
+  
     return (
       <Router>
-      <div>
+      <div className="appContainer">
         <Nav />
         <Jumbotron />
-
-          <form className="formSection">
-              <Input
-                name="title"
-                placeholder="Title (required)"
-              />
-              <FormBtn>
-                Search
-              </FormBtn>
-          </form>
-
-          <Switch>
-            <Route exact path="/" component={Search} />
-            <Route exact path="/search" component={Search} />
-            <Route exact path="/saved" component={Saved} />
-            <Route exact path={NoMatch} />
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={Search} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/saved" component={Saved} />
+          <Route component={NoMatch} />
+        </Switch>
       </div>
       </Router>
       );
   }
-}
 
 export default App;
