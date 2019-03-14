@@ -59,9 +59,29 @@ class Search extends Component {
 render() {
     return (
         <div>
+            <div className="searchForm">
+                <h3>Search for books</h3>
+                <br/>
+                <Input
+                    value={this.state.search}
+                    onChange={this.handleInputChange}
+                    name="search"
+                    placeholder="book title"
+                />
+                <FormBtn
+                    onClick={this.handleSubmit}
+                >search</FormBtn>
+            </div>
+
+            <BookList>
+                <h3>{this.state.currentList}</h3>
+                {this.state.books.map(book => (
+                    <Book key={book.key} bookData={book} saveBook={this.UNSAFE_componentWillMount.saveBook}/>
+                ))}
+            </BookList>
         </div>
         );
-    }
+    };
 }
 
 export default Search;
