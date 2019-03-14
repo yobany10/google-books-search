@@ -5,6 +5,14 @@ export default {
     getBooks: function() {
         return axios.get("/api/books");
     },
+    // Gets the book with the given id
+    getBook: function(id) {
+        return axios.get("/api/books/" + id);
+    },
+    searchBook: function(search) {
+        console.log(search);
+        return axios.get("/api/google/" + search);
+    },
     // Saves a book to the database
     saveBook: function(bookData) {
         return axios.post("/api/books", bookData);
