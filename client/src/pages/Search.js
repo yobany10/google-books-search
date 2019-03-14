@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import Nav from "./components/Nav";
-// import Jumbotron from "./components/Jumbotron"
 import { Input, FormBtn } from "../components/Form";
-import { Link } from "react-router-dom";
+import BookList from "../components/BookList";
+import API from "../utils/API";
 
 class Search extends Component {
     state = {
