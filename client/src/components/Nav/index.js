@@ -9,7 +9,7 @@ function Nav(props) {
         <Link to="/search">
         <h4>search</h4>
         </Link>
-        <Link to="/save">
+        <Link to="/saved">
         <h4>saved</h4>
         </Link>
         </nav>

@@ -76,7 +76,7 @@ render() {
             <BookList>
                 <h3>{this.state.currentList}</h3>
                 {this.state.books.map(book => (
-                    <Book key={book.key} bookData={book} saveBook={this.UNSAFE_componentWillMount.saveBook}/>
+                    <Book key={book.key} bookData={book} saveBook={this.saveBook}/>
                 ))}
             </BookList>
         </div>

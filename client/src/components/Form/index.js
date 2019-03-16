@@ -14,7 +14,7 @@ export function Input(props) {
 export function FormBtn(props) {
   return (
     <button {...props} style={{ float: "left", marginBottom: 10 }} className="btn btn-primary">
-      {props.children}
+      search
     </button>
   );
 }

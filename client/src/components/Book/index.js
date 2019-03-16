@@ -12,7 +12,7 @@ function Book(props) {
 
             <div className="book-buttons">
                 <button type="button"
-                onClick={() => {window.open(book.link)}}>View
+                onClick={() => {window.open(book.link);}}>View
                 </button>
                 <button type="button"
                 onClick={() => props.saveBook(book)}>Save
