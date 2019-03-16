@@ -10,7 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("/static/"));
+  app.use(express.static("build/static/"));
+  app.use(express.static("google-books-search/build/static/"));
+  app.use(express.static("google-books-search/build/"));
 }
 
 // Add routes, both API and view
